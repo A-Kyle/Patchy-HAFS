@@ -1,0 +1,20 @@
+This directory is for running HAFS forecast 
+components with multiple static nests (MSN).
+
+To run the forecast, you need to do a few things:
+  1.  Run "init_new_case.sh" to create a working
+      directory for your forecast.
+  2a. Place your initial conditions data in your 
+      new working directory's "data" subdirectory.
+  2b. Modify settings_sys.sh, settings_grid.sh,
+      settings_chgres.sh, and settings_forecast.sh
+      in accordance with your experimental design.
+  3.  Modify and MPI-run (i.e., using sbatch) these 
+      programs in order:
+        - slurm_grid_multi.sh
+        - slurm_sfc_multi.sh
+        - slurm_chgres.sh
+        - slurm_forecast_2nest.sh
+
+This patchwork workflow is still in early stages 
+of development and not intended for general use.
